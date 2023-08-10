@@ -13,7 +13,7 @@ type Config struct {
 }
 
 func NewConfig() Config {
-	godotenv.Load()
+	godotenv.Load("/.env")
 	config := Config{}
 	if err := env.Parse(&config); err != nil {
 		panic(err)
